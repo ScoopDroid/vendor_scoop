@@ -1,4 +1,4 @@
-# Inherit mini common DerpFest stuff
-$(call inherit-product, vendor/derp/config/common_mobile.mk)
+# Inherit mini common ScoopDroid stuff
+$(call inherit-product, vendor/scoop/config/common_mobile.mk)
 
 PRODUCT_SIZE := mini

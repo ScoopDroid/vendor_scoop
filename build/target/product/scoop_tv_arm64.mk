@@ -1,5 +1,5 @@
 # Copyright (C) 2018-2020 The LineageOS Project
-# Copyright (C) 2021 DerpFest
+# Copyright (C) 2021 ScoopDroid
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,12 +13,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, device/generic/common/gsi_x86.mk)
+$(call inherit-product, device/google/atv/products/aosp_tv_arm64.mk)
 
-include vendor/derp/build/target/product/derp_generic_target.mk
-
-PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
+include vendor/scoop/build/target/product/scoop_generic_tv_target.mk
 
 TARGET_NO_KERNEL_OVERRIDE := true
 
-PRODUCT_NAME := derp_gsi_x86
+PRODUCT_NAME := scoop_tv_arm64
+
+PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS :=

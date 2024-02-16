@@ -1,11 +1,11 @@
-# Inherit common DerpFest stuff
-$(call inherit-product, vendor/derp/config/common.mk)
+# Inherit common ScoopDroid stuff
+$(call inherit-product, vendor/scoop/config/common.mk)
 
-# Inherit DerpFest atv device tree
-$(call inherit-product, device/derp/atv/derp_atv.mk)
+# Inherit ScoopDroid atv device tree
+$(call inherit-product, device/scoop/atv/scoop_atv.mk)
 
 # AOSP packages
 PRODUCT_PACKAGES += \
     LeanbackIME
 
-PRODUCT_PACKAGE_OVERLAYS += vendor/derp/overlay/tv
+PRODUCT_PACKAGE_OVERLAYS += vendor/scoop/overlay/tv

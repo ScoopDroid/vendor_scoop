@@ -1,7 +1,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 
-# Inherit full common DerpFest stuff
-$(call inherit-product, vendor/derp/config/common_full.mk)
+# Inherit full common ScoopDroid stuff
+$(call inherit-product, vendor/scoop/config/common_full.mk)
 
 # GApps
 WITH_GMS := true
@@ -12,10 +12,10 @@ $(call inherit-product, vendor/gms/gms_full_tablet_wifionly.mk)
 PRODUCT_PACKAGES += \
     LatinIME
 
-# Include DerpFest LatinIME dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/derp/overlay/dictionaries
+# Include ScoopDroid LatinIME dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/scoop/overlay/dictionaries
 
 # Pixel Framework
 $(call inherit-product, vendor/pixel-framework/config.mk)
 
-$(call inherit-product, vendor/derp/config/wifionly.mk)
+$(call inherit-product, vendor/scoop/config/wifionly.mk)

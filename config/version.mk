@@ -1,5 +1,5 @@
 # Copyright (C) 2016-2017 AOSiP
-# Copyright (C) 2022 DerpFest
+# Copyright (C) 2022 ScoopDroid
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,33 +14,33 @@
 # limitations under the License.
 
 # Versioning System
-ifeq ($(DERP_VERSION_APPEND_TIME_OF_DAY),true)
+ifeq ($(SCOOP_VERSION_APPEND_TIME_OF_DAY),true)
     BUILD_DATE := $(shell date +%Y%m%d-%H%M)
 else
     BUILD_DATE := $(shell date +%Y%m%d)
 endif
 
-TARGET_PRODUCT_SHORT := $(subst derp_,,$(DERP_BUILDTYPE))
+TARGET_PRODUCT_SHORT := $(subst scoop_,,$(SCOOP_BUILDTYPE))
 
-DERP_BUILDTYPE ?= Community
-DERP_STATUS := Stable
-DERP_BUILD_VERSION := $(PLATFORM_VERSION)
-DERP_VERSION := $(DERP_BUILD_VERSION)-$(DERP_BUILDTYPE)-$(DERP_STATUS)-$(DERP_BUILD)-$(BUILD_DATE)
-ROM_FINGERPRINT := DerpFest/$(PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(shell date +%H%M)
+SCOOP_BUILDTYPE ?= Community
+SCOOP_STATUS := Stable
+SCOOP_BUILD_VERSION := $(PLATFORM_VERSION)
+SCOOP_VERSION := $(SCOOP_BUILD_VERSION)-$(SCOOP_BUILDTYPE)-$(SCOOP_STATUS)-$(SCOOP_BUILD)-$(BUILD_DATE)
+ROM_FINGERPRINT := ScoopDroid/$(PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(shell date +%H%M)
 
-ifeq ($(DERP_BUILDTYPE), CI)
+ifeq ($(SCOOP_BUILDTYPE), CI)
     BUILD_KEYS := release-keys
 endif
 
 PRODUCT_SYSTEM_PROPERTIES += \
-  ro.derp.build.version=$(DERP_BUILD_VERSION) \
-  ro.derp.build.date=$(BUILD_DATE) \
-  ro.derp.buildtype=$(DERP_BUILDTYPE) \
-  ro.derp.fingerprint=$(ROM_FINGERPRINT) \
-  ro.derp.version=$(DERP_VERSION) \
-  ro.modversion=$(DERP_VERSION)
+  ro.scoop.build.version=$(SCOOP_BUILD_VERSION) \
+  ro.scoop.build.date=$(BUILD_DATE) \
+  ro.scoop.buildtype=$(SCOOP_BUILDTYPE) \
+  ro.scoop.fingerprint=$(ROM_FINGERPRINT) \
+  ro.scoop.version=$(SCOOP_VERSION) \
+  ro.modversion=$(SCOOP_VERSION)
 
 ifneq ($(OVERRIDE_OTA_CHANNEL),)
 PRODUCT_SYSTEM_PROPERTIES += \
-    derp.updater.uri=$(OVERRIDE_OTA_CHANNEL)
+    scoop.updater.uri=$(OVERRIDE_OTA_CHANNEL)
 endif

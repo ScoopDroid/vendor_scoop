@@ -1,12 +1,12 @@
-# Inherit common mobile DerpFest stuff
-$(call inherit-product, vendor/derp/config/common.mk)
+# Inherit common mobile ScoopDroid stuff
+$(call inherit-product, vendor/scoop/config/common.mk)
 
 # Include AOSP audio files
 $(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage14.mk)
-include vendor/derp/config/aosp_audio.mk
+include vendor/scoop/config/aosp_audio.mk
 
-# Include DerpFest audio files
-include vendor/derp/config/derp_audio.mk
+# Include ScoopDroid audio files
+include vendor/scoop/config/scoop_audio.mk
 
 # Default notification/alarm sounds
 PRODUCT_PRODUCT_PROPERTIES += \

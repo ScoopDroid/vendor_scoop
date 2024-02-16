@@ -1,4 +1,4 @@
-# DerpFest packages
+# ScoopDroid packages
 PRODUCT_PACKAGES += \
     BatteryStatsViewer \
     DerpSetupWizard \
@@ -30,7 +30,7 @@ endif
 PRODUCT_PACKAGES += \
     SimpleDeviceConfig
 
-# Extra tools in DerpFest
+# Extra tools in ScoopDroid
 PRODUCT_PACKAGES += \
     bash \
     curl \

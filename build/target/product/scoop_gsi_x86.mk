@@ -1,5 +1,5 @@
 # Copyright (C) 2018-2020 The LineageOS Project
-# Copyright (C) 2021 DerpFest
+# Copyright (C) 2021 ScoopDroid
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,8 +13,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include vendor/derp/build/target/product/derp_generic_car_target.mk
+$(call inherit-product, device/generic/common/gsi_x86.mk)
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/sdk_x86_64.mk)
+include vendor/scoop/build/target/product/scoop_generic_target.mk
 
-PRODUCT_NAME := derp_sdk_car_x86_64
+PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
+
+TARGET_NO_KERNEL_OVERRIDE := true
+
+PRODUCT_NAME := scoop_gsi_x86

@@ -1,14 +1,14 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 
-# Inherit full common DerpFest stuff
-$(call inherit-product, vendor/derp/config/common_full.mk)
+# Inherit full common ScoopDroid stuff
+$(call inherit-product, vendor/scoop/config/common_full.mk)
 
 # Required packages
 PRODUCT_PACKAGES += \
     LatinIME
 
 # Include Lineage LatinIME dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/derp/overlay/dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/scoop/overlay/dictionaries
 
 # GApps
 WITH_GMS := true
@@ -25,4 +25,4 @@ endif
 $(call inherit-product, vendor/pixel-framework/config.mk)
 
 # Inherit from telephony config
-$(call inherit-product, vendor/derp/config/telephony.mk)
+$(call inherit-product, vendor/scoop/config/telephony.mk)

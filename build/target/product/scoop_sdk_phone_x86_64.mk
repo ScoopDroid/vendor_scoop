@@ -1,5 +1,5 @@
 # Copyright (C) 2021 The LineageOS Project
-# Copyright (C) 2021 DerpFest
+# Copyright (C) 2021 ScoopDroid
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,11 +15,11 @@
 
 $(call inherit-product, build/target/product/sdk_phone_x86_64.mk)
 
-include vendor/derp/build/target/product/derp_generic_target.mk
+include vendor/scoop/build/target/product/scoop_generic_target.mk
 
 # Enable mainline checking
 PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := relaxed
 
 # Overrides
-PRODUCT_NAME := derp_sdk_phone_x86_64
+PRODUCT_NAME := scoop_sdk_phone_x86_64
 PRODUCT_MODEL := LineageOS Android SDK built for x86_64
